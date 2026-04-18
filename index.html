@@ -409,26 +409,29 @@
   <section class="py-10 md:py-20 px-8 md:px-20 bg-surface-container-low" id="resultados">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-      <!-- Texto -->
+      <!-- Texto superior (título + deslizá) -->
       <div class="anim">
         <span class="text-primary font-sans text-sm tracking-[0.2em] mb-4 block">RESULTADOS REALES</span>
         <h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-4">¿Y si este fuera <span class="italic">tu antes y después?</span></h2>
         <div class="w-10 h-0.5 bg-primary mb-8"></div>
-        <p class="text-on-surface-variant text-lg leading-relaxed mb-5">
-          Cada procedimiento es una obra personalizada. Los resultados hablan por sí solos: naturales, armónicos y completamente reales.
-        </p>
-        <p class="text-on-surface-variant text-lg leading-relaxed mb-10">
+        <p class="text-on-surface-variant text-lg leading-relaxed mb-5 lg:mb-0">
           Deslizá la imagen para comparar el antes y el después de nuestras pacientes.
         </p>
-        <a href="https://wa.me/5492617476425?text=Hola%20Dra.%20Carolina%2C%20quisiera%20reservar%20un%20turno."
-           target="_blank" rel="noopener"
-           class="editorial-gradient text-on-primary px-8 py-3.5 rounded-full font-semibold text-base hover:opacity-90 transition-all inline-block">
-          Reservar Turno
-        </a>
+        <!-- Solo visible en desktop -->
+        <div class="hidden lg:block mt-5">
+          <p class="text-on-surface-variant text-lg leading-relaxed mb-10">
+            Cada procedimiento es una obra personalizada. Los resultados hablan por sí solos: naturales, armónicos y completamente reales.
+          </p>
+          <a href="https://wa.me/5492617476425?text=Hola%20Dra.%20Carolina%2C%20quisiera%20reservar%20un%20turno."
+             target="_blank" rel="noopener"
+             class="editorial-gradient text-on-primary px-8 py-3.5 rounded-full font-semibold text-base hover:opacity-90 transition-all inline-block">
+            Reservar Turno
+          </a>
+        </div>
       </div>
 
       <!-- Slider antes/después -->
-      <div class="anim d1 order-2">
+      <div class="anim d1 order-2 lg:order-none">
         <div id="ba-container" class="relative rounded-2xl overflow-hidden select-none cursor-ew-resize" style="aspect-ratio: 3/4; max-height: 580px;">
           <!-- Before -->
           <img src="images/antes.jpg" alt="Antes del tratamiento" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
@@ -446,6 +449,18 @@
           </div>
         </div>
         <p class="text-center text-on-surface-variant text-xs mt-3 opacity-60 tracking-wide">← Deslizá para comparar →</p>
+      </div>
+
+      <!-- Solo visible en móvil: texto inferior + botón -->
+      <div class="lg:hidden order-3 anim">
+        <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+          Cada procedimiento es una obra personalizada. Los resultados hablan por sí solos: naturales, armónicos y completamente reales.
+        </p>
+        <a href="https://wa.me/5492617476425?text=Hola%20Dra.%20Carolina%2C%20quisiera%20reservar%20un%20turno."
+           target="_blank" rel="noopener"
+           class="editorial-gradient text-on-primary px-8 py-3.5 rounded-full font-semibold text-base hover:opacity-90 transition-all inline-block">
+          Reservar Turno
+        </a>
       </div>
 
     </div>
